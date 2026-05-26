@@ -1,0 +1,208 @@
+{
+  "info": {
+    "_postman_id": "0821148e-e73e-46fd-9fe5-adcb5f9de588",
+    "name": "project_2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50567483",
+    "_collection_link": "https://go.postman.co/collection/50567483-0821148e-e73e-46fd-9fe5-adcb5f9de588?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "user-register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"subarna\",\r\n    \"email\":\"sample1@yopmail.com\",\r\n    \"password\":\"100000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/u1/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "u1",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user-verify-through-otp",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"sample1@yopmail.com\",\r\n    \"otp\":\"978677\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/u1/verify",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "u1",
+            "verify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user-resend-otp",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"sample@yopmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/u1/resend/otp",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "u1",
+            "resend",
+            "otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "auth-token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"sample1@yopmail.com\",\r\n    \"password\":\"100000\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/u1/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "u1",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin-fetches-all-users",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-access-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJhYTdkZjRjMjJkYzNmZjExMWYwNyIsIm5hbWUiOiJzdWJhcm5hIiwiZW1haWwiOiJzYW1wbGUxQHlvcG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5Nzc1OTM3LCJleHAiOjE3Nzk4NjIzMzd9.eG4DNlZoZP6oCvXL_ZZkbMRR3gm2JkEAQ49H97ofSZM",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/u1/view",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "u1",
+            "view"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user-fetches-own-profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-access-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJhNjAyZTJkZWYyOGMwMmE5YjE1MCIsIm5hbWUiOiJ1c2VyIiwiZW1haWwiOiJzYW1wbGVAeW9wbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc3OTc3NjUzMCwiZXhwIjoxNzc5ODYyOTMwfQ.MTdmO4vM6Faliy8BVkUcUTdEiiFFAIOoIKOlWd18gE4",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/u1/user/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "u1",
+            "user",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin-fetches-individual-user",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-access-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTJhYTdkZjRjMjJkYzNmZjExMWYwNyIsIm5hbWUiOiJzdWJhcm5hIiwiZW1haWwiOiJzYW1wbGUxQHlvcG1haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5Nzc2ODE0LCJleHAiOjE3Nzk4NjMyMTR9.sSUlGD4vz03iXVNYbXYmdTYXSRjCeOkzGL3h6Ir3E_c",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/u1/view/6a12a602e2def28c02a9b150",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "u1",
+            "view",
+            "6a12a602e2def28c02a9b150"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
