@@ -154,7 +154,7 @@ class AuthController {
         const currentTime = new Date();
         const sentTime = new Date(otpPresent.createdAt.getTime());
         const diff = currentTime - sentTime;
-        //6s cooldown
+        //60s cooldown
         if (diff < 60 * 1000) {
           return res.status(400).json({
             success: false,
